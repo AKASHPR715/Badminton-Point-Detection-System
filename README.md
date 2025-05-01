@@ -74,3 +74,38 @@ This project was undertaken as part of my professional training and responsibili
            [ Point Validity Inference & Stats ]
                           ↓
         [ Annotated Video Output + Match Data ]
+
+# 📹 How It Works – End-to-End
+
+## Preprocessing:
+- Input video is broken down into frames.
+- Frame dimensions are standardized.
+
+## YOLO Detection:
+- Each frame is passed to a YOLOv4 model.
+- If a shuttlecock is detected, its coordinates are stored.
+
+## Trajectory Estimation (TrackNet):
+- Sequential frames are analyzed to estimate trajectory and cork speed.
+- Prediction is made about the cork's next location.
+
+## Point Determination:
+- Based on trajectory end point and court calibration, the system checks if the cork is “in” or “out”.
+- Point is assigned to the respective player.
+
+## Overlay & Output:
+- Visual feedback like bounding boxes, trajectory lines, and scores are drawn.
+- Final annotated video is exported.
+
+# 📈 Improvements & Future Work
+
+- ⚙️ **Automated Net Detection** for full-court calibration from any camera angle.
+- 🕵️ **Multi-angle Fusion** using dual-camera input to improve occlusion scenarios.
+- 📲 **Web-based Dashboard** to live-stream scores, analysis, and video feed.
+- 🤖 **Deep Learning Upgrade**: Integrate transformer-based trackers for better temporal understanding.
+- 📦 **Plug-and-Play Hardware Kits** for live match installations.
+
+# 🚫 Code Access
+Due to non-disclosure and intellectual property clauses signed with iCore Technologies, the codebase, trained weights, and datasets used for this project cannot be shared. This README serves only as documentation of the work and system capabilities.
+
+If you are interested in learning more or seeing a demonstration, please contact iCore Technologies directly.
